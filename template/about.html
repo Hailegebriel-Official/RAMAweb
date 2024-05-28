@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Temperature & Health Advice</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-top: 50px;
+  }
+  .temperature-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .temperature {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .temperature img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .health-advice {
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="temperature-container">
+    <div class="temperature" id="temperature"></div>
+    <div class="health-advice" id="healthAdvice"></div>
+</div>
+
+<script>
+// Function to update temperature and health advice
+function updateTemperatureAndAdvice(temperature) {
+    var temperatureDiv = document.getElementById("temperature");
+    var healthAdviceDiv = document.getElementById("healthAdvice");
+
+    temperatureDiv.innerHTML = "<img src='mercury_icon.png' alt='Mercury' width='30px' height='30px'>" + "<span style='font-size: 48px;'>" + temperature + "°C</span>";
+
+    if (temperature < 37) {
+        healthAdviceDiv.innerHTML = "<img src='normal_icon.png' alt='Normal' width='30px' height='30px'> " + "Temperature is normal. Stay hydrated and maintain a healthy lifestyle.";
+    } else if (temperature >= 37 && temperature < 38) {
+        healthAdviceDiv.innerHTML = "<img src='high_icon.png' alt='High' width='30px' height='30px'> " + "Temperature is slightly elevated. Rest and drink fluids.";
+    } else {
+        healthAdviceDiv.innerHTML = "<img src='high_icon.png' alt='High' width='30px' height='30px'> " + "Temperature is high. Seek medical attention and rest.";
+    }
+}
+
+// Simulated function to get real-time temperature data (Replace this with actual data source)
+function getRealTimeTemperature() {
+    // For demonstration, generating random temperature between 35 and 40
+    return Math.floor(Math.random() * 6) + 35;
+}
+
+// Update temperature and health advice every 5 seconds
+setInterval(function() {
+    var temperature = getRealTimeTemperature();
+    updateTemperatureAndAdvice(temperature);
+}, 5000);
+
+// Initial update
+var initialTemperature = getRealTimeTemperature();
+updateTemperatureAndAdvice(initialTemperature);
+</script>
+</body>
+</html>

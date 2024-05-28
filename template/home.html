@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="#">RAMA Medium Clinic</a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2 active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Internal Medicine</a></li>
+                    <li><a class="dropdown-item" href="#">Surgery </a></li>
+                    <li><a class="dropdown-item" href="#">Mental Health Specialties</a></li>
+                    <li><a class="dropdown-item" href="#">Dermatology</a></li>
+                    <li><a class="dropdown-item" href="#">Pediatrics</a></li>
+                    <li><a class="dropdown-item" href="#">Laboratory</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Laboratory
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Clinical Chemistry</a></li>
+                    <li><a class="dropdown-item" href="#">Hematology </a></li>
+                    <li><a class="dropdown-item" href="#">Coagulation Studies</a></li>
+                    <li><a class="dropdown-item" href="#">Immunology</a></li>
+                    <li><a class="dropdown-item" href="#">Microbiology</a></li>
+                    <li><a class="dropdown-item" href="#">Urinalysis</a></li>
+                    <li><a class="dropdown-item" href="#">Toxicology</a></li>
+                    <li><a class="dropdown-item" href="#">Histopathology</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Result</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="/doctor">Find a Doctor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="/result">Health Library</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="/result">Appointments</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="login-button">Login</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+    </nav>
+
+
+    <section class="hero-section">
+      <div class="row">
+        <div class="col">
+          <h1>Wellcome</h1>
+          <h4>To</h4>
+          <h3>Your Health Home!</h3>
+        </div>
+      </div>
+    </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+
+<section>
+  <p></p>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'css\reception.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Reception</h5>
+            <p class="card-text">At RAMA Medium Clinic, we're committed to providing personalized healthcare services in a welcoming environment.
+               Our reception staff is here to assist you with scheduling appointments and answering any questions you may have.Thank you for choosing
+                 RAMA Medium Clinic for your healthcare needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'css\nurse.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Nurse</h5>
+            <p class="card-text">Our dedicated team of nurses is committed to providing compassionate care to all our patients. With years of experience and expertise, our nurses play a crucial role in ensuring your comfort and well-being during your visit. 
+              From administering treatments to offering support and guidance, our nurses are here to provide you with the highest level of care possible. 
+              Trust in the expertise of our nursing staff as they work tirelessly to meet your healthcare needs with professionalism and kindness.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'css\doctor-kid.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Doctor</h5>
+            <p class="card-text">Our team of experienced doctors is dedicated to delivering exceptional healthcare services tailored to your unique needs. With a wealth of knowledge and expertise, our doctors are committed to providing accurate diagnoses, effective treatments, and compassionate care. Whether you're visiting for a routine check-up or seeking specialized medical attention, you can trust in the skill and professionalism of our doctors to guide you on your path to optimal health and well-being.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section>
+      <p></p>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'css\lab.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Laboratory</h5>
+              <p class="card-text">We offer cutting-edge laboratory services to support your healthcare needs. Our advanced facilities and skilled technicians ensure accurate and timely results for a wide range of tests and analyses. Whether you require routine blood work, diagnostic imaging, or specialized testing, our laboratory is equipped to provide you with precise and reliable results. Trust in our commitment to excellence as we work diligently to assist you and your healthcare provider in making informed decisions about your health.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'css\parentwithkid.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Emergency Room</h5>
+              <p class="card-text">Our emergency room is staffed with highly trained medical professionals ready to provide prompt and expert care 24/7. Whether you're experiencing a sudden illness, injury, or medical emergency, our team is here to deliver immediate attention and support. Equipped with state-of-the-art facilities and cutting-edge technology, our emergency room ensures rapid assessment, diagnosis, and treatment to address your urgent healthcare needs. Trust in our dedicated team to deliver compassionate and efficient care during your time of need.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'css\waitingroom.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Waiting Room</h5>
+              <p class="card-text">Our waiting room is designed with your comfort in mind. Relax in our welcoming and spacious environment while you wait for your appointment. With comfortable seating, soothing decor, and complimentary amenities, we strive to ensure your wait is as pleasant as possible. Our friendly staff is on hand to assist you with any needs or concerns you may have during your visit. Thank you for choosing RAMA Medium Clinic, where your comfort and well-being are our top priorities.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+<section> 
+  <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">WE CARE WE CURE!</p>
+                    </div>
+                    <div class="social-medias">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</section>
+<section>
+  <h6>RAMA Medium Clinic @2024</h6>
+</section>
+</html>
